@@ -20,15 +20,11 @@
         <div class="jumbotron">
             <div class="row">
                 <div class="leftcolumn">
-                    {% for post in posts reversed %}
                     <div class="card">
-                        <a href="/post/{{post.id}}" style="text-decoration: none; color: black">
-                            <h2>{{post.title}}</h2>
-                            <h5>{{post.created_at}}</h5>
-                            <p>{{post.body|truncatewords:20}}</p>
-                        </a>
+                        <h2>{{posts.title}}</h2>
+                        <h5>{{posts.created_at}}</h5>
+                        <p>{{posts.body}}</p>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
         </div>
